@@ -67,6 +67,7 @@ textarea {
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
+
 }
 
 .saveBtn i:hover {
@@ -77,5 +78,6 @@ textarea {
 /* Timeblock */
 .timeblock {
   margin: 15px;
+  border-radius: 5px;
 }
 
