@@ -75,6 +75,14 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
+/* Local storage saved alert */
+#ls-alert {
+  width: 50%;
+  margin: auto;
+  display: none;
+  text-align: center;
+}
+
 /* Timeblock */
 .timeblock {
   margin: 15px;

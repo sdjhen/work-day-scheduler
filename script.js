@@ -34,6 +34,18 @@ $(document).ready(function () {
 
     // Save user input to local storage
     localStorage.setItem(key, userInput);
+
+    // Alert user that input saved to local storage
+    const lsAlert = $('<p>Saved to local storage!</p>');
+    // Append alert to DOM on click
+    $('#ls-alert').append(lsAlert);
+    $('.to-show').show(); // Reveal alert hidden by CSS
+
+    setTimeout(function () {
+      lsAlert.fadeOut('slow', function () {
+        $('#ls-alert').remove();
+      });
+    }, 2000); // Disappear after 2s
   });
 
   // Retrieve user input and persist on refresh
