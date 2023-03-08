@@ -20,4 +20,28 @@ $(document).ready(function () {
       $(this).addClass('future');
     }
   });
+
+  // Save user input on click
+  $('.saveBtn').click(function () {
+    // Get the index of the clicked button
+    const index = $('.saveBtn').index($(this));
+
+    // Get user input from Timeblocks
+    const userInput = $('.timeblock-input').eq(index).val();
+
+    // Assign local storage key
+    const key = `Timeblock ${index}`;
+
+    // Save user input to local storage
+    localStorage.setItem(key, userInput);
+  });
+
+  // Retrieve user input and persist on refresh
+  $('.timeblock-input').each(function (index) {
+    const key = `Timeblock ${index}`;
+    const value = localStorage.getItem(key);
+    if (value != null) {
+      $(this).val(value);
+    }
+  });
 });
